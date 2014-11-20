@@ -35,3 +35,5 @@ HTML5, CSS3, JQuery
  - Better presetation of concept and better immagery
  - Resposive layout to be implement all across the demo
    
+
+<b>PLESE IF YOU EXPERIMENT ANY BUGS/ERRORS/PROBLEMS TESTiNG OR CHECKING OUT THIS PROJECT</b> report it though GITHUB or @ alex.garulli@gmail.com
