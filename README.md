@@ -33,4 +33,5 @@ HTML5, CSS3, JQuery
 
  - Testing Cross-browser
  - Better presetation of concept and better immagery
+ - Resposive layout to be implement all across the demo
    
