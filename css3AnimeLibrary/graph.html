@@ -1,0 +1,405 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>css</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/graphs.css">
+    <!-- endbuild -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script>
+        $(function() {
+            //Vertical bars graph start
+            $("#bars li .bar").each( function( key, bar ) {
+                var percentage = $(this).data('percentage');
+
+                $(this).animate({
+                    'height' : percentage + '%'
+                }, 1000);
+            });
+        });
+
+
+        $(document).ready(function() {
+
+            //LINE GRAPH TRIGGER
+            $('.trigger').click(function() {
+                console.log('gggg')
+                $('#firstgraph-container .content').removeClass('running').delay(10).queue(function(next){
+                    $(this).addClass('running');
+                    console.log('gggg')
+                    next();
+                });
+                return false;
+            });
+
+            //LINE GRAPH TRIGGER
+            $('.trigger7').click(function() {
+                $('#firstgraph-container2  .content2').removeClass('running').delay(10).queue(function(next){
+                    $(this).addClass('running');
+                    next();
+                });
+                return false;
+            });
+
+
+            //VERTICAL BARS GRAPH TRIGGER
+            $('.trigger2').click(function() {
+                console.log('one')
+                $("#bars li .bar").css('height','0')
+                $("#bars li .bar").each(function (key, bar) {
+                    var percentage = $(this).data('percentage');
+
+                    $(this).animate({
+                        'height': percentage + '%'
+                    }, 1000);
+                });
+            });
+
+            //HORIZONTAL BARS GRAPH TRIGGER
+            $('.trigger6').click(function() {
+                console.log('33')
+                $('.skill-list li').removeClass("skill").delay(10).queue(function (next) {
+                    $(this).addClass('skill');
+                    next();
+
+                });
+                return false;
+            });
+
+            //PIE CHART 1 GRAPH TRIGGER
+            $('.trigger3').click(function() {
+                 $('.spinner-inner').removeClass('anima-pie').delay(10).queue(function(next){
+                    $(this).addClass('anima-pie');
+                    next();
+
+                });
+                $('.spinner-mask p').removeClass('anima-text').delay(10).queue(function(next){
+                    $(this).addClass('anima-text');
+                    next();
+                });
+                return false;
+            });
+
+            //PIE CHART 2 GRAPH TRIGGER
+            $('.trigger4').click(function() {
+                console.log('33')
+                $('#pie-2 .spinner :first-child em').removeClass("animation1").delay(10).queue(function (next) {
+                    $(this).addClass('animation1');
+                    next();
+
+                });
+                $('#pie-2 .spinner :last-child em').removeClass("animation2").delay(10).queue(function (next) {
+                    $(this).addClass('animation2');
+                    next();
+
+                });
+
+                $('#pie-2 p').removeClass('anima-text').delay(10).queue(function (next) {
+                    $(this).addClass('anima-text');
+                    console.log('ggi')
+                    next();
+                });
+                return false;
+            });
+
+            //PIE CHART 3 GRAPH TRIGGER
+            $('.trigger5').click(function() {
+                console.log('33')
+                $('#pie-3 .spinner :first-child em').removeClass("animation1").delay(10).queue(function (next) {
+                    $(this).addClass('animation1');
+                    next();
+
+                });
+                $('#pie-3 .spinner :last-child em').removeClass("animation2").delay(10).queue(function (next) {
+                    $(this).addClass('animation2');
+                    next();
+
+                });
+
+                $('#pie-3 p').removeClass('anima-text').delay(10).queue(function (next) {
+                    $(this).addClass('anima-text');
+                    console.log('ggi')
+                    next();
+
+                });
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+<div class="container">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li><a href="index.html">Images</a></li>
+            <li class="active"><a href="graph.html" >Graph</a></li>
+            <li ><a href="menu.html">Menu</a></li>
+        </ul>
+        <h3 class="text-muted">css</h3>
+    </div>
+
+
+    <!---LINE GRAPH CONTAINER -->
+    <div id="firstgraph-container" >
+        <div class="chart">
+
+            <div class="content running">
+
+                <div id="layerBall" class="ball ">
+                    <a href="#"><small>100 Visit</small></a>
+                </div>
+
+                <div class="line"></div>
+
+                <div id="layerBall1" class="ball1">
+                    <a href="#"><small>300 Visits</small></a>
+                </div>
+
+                <div class="line1"></div>
+
+                <div id="layerBall2" class="ball2">
+                    <a href="#"><small>10 Visits</small></a>
+                </div>
+
+                <div class="line2"></div>
+
+                <div id="layerBall3" class="ball3">
+                    <a href="#"><small>4251 Visits</small></a>
+                </div>
+
+                <div class="line3"></div>
+
+                <div id="layerBall4" class="ball4">
+                    <a href="#"><small>1752 Visits</small></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div> <!--- END LINE GRAPH CONTAINER -->
+
+    <div class="trigger" ><button type="button" class="btn btn-default">Try Again</button></div>
+
+
+
+        <!---LINE GRAPH CONTAINER 2 -->
+        <div id="firstgraph-container2" >
+            <div class="chart">
+
+                <div class="content2 running">
+            <div  id="blue-line">
+                        <div id="layerBallc" class="ball">
+                            <a href="#"><small>100 Visit</small></a>
+                        </div>
+
+                            <div class="line"></div>
+
+                            <div id="layerBall1c" class="ball1">
+                                <a href="#"><small>300 Visits</small></a>
+                            </div>
+
+                            <div class="line1"></div>
+
+                            <div id="layerBall2c" class="ball2">
+                                <a href="#"><small>10 Visits</small></a>
+                            </div>
+
+                            <div class="line2"></div>
+
+                            <div id="layerBall3c" class="ball3">
+                                <a href="#"><small>4251 Visits</small></a>
+                            </div>
+
+                            <div class="line3"></div>
+
+                            <div id="layerBall4c" class="ball4">
+                                <a href="#"><small>1752 Visits</small></a>
+                            </div>
+                </div>
+                    <!--- SECOND LINE -->
+                    <div  id="red-line">
+                        <div id="layerBall1a0" class="ball0red">
+                            <a href="#"><small>100 Visit</small></a>
+                        </div>
+
+                                <div id="layerBall1a" class="ball5">
+                                    <a href="#"><small>100 Visit</small></a>
+                                </div>
+
+                                <div class="line4"></div>
+
+                                <div id="layerBall3a" class="ball6">
+                                    <a href="#"><small>300 Visits</small></a>
+                                </div>
+
+                                <div class="line5"></div>
+
+                                <div id="layerBall2a" class="ball7">
+                                    <a href="#"><small>10 Visits</small></a>
+                                </div>
+
+                                <div class="line6"></div>
+
+
+                                <div class="line7"></div>
+
+                                <div id="layerBall4a" class="ball9">
+                                    <a href="#"><small>1752 Visits</small></a>
+                                </div>
+                                <div class="line10"></div>
+                        </div>
+
+  <!--- third LINE -->
+                    <div  id="green-line">
+                        <div id="layerBall1b0green" class="ball0green">
+                            <a href="#"><small>100 Visit</small></a>
+                        </div>
+
+                            <div id="layerBall1b" class="ball10">
+                                <a href="#"><small>100 Visit</small></a>
+                            </div>
+
+                            <div class="line11"></div>
+
+                            <div id="layerBall2b" class="ball11">
+                                <a href="#"><small>300 Visits</small></a>
+                            </div>
+
+                            <div class="line12"></div>
+
+                            <div id="layerBall3b" class="ball12">
+                                <a href="#"><small>10 Visits</small></a>
+                            </div>
+
+                            <div class="line13"></div>
+
+                            <div id="layerBall4b" class="ball13">
+                                <a href="#"><small>4251 Visits</small></a>
+                            </div>
+
+                            <div class="line14"></div>
+
+
+
+                            <div class="line15"></div>
+                        </div>
+                </div>
+            </div>
+        </div> <!--- END LINE GRAPH CONTAINER -->
+
+            <div class="trigger7" ><button type="button" class="btn btn-default">Try Again</button></div>
+
+   <!---VERTICAL BAR GRAPH -->
+    <div id="chart">
+        <ul id="numbers">
+            <li><span>100%</span></li>
+            <li><span>90%</span></li>
+            <li><span>80%</span></li>
+            <li><span>70%</span></li>
+            <li><span>60%</span></li>
+            <li><span>50%</span></li>
+            <li><span>40%</span></li>
+            <li><span>30%</span></li>
+            <li><span>20%</span></li>
+            <li><span>10%</span></li>
+            <li><span>0%</span></li>
+        </ul>
+
+        <ul id="bars">
+            <li><div data-percentage="56" class="bar"></div><span>Option 1</span></li>
+            <li><div data-percentage="33" class="bar"></div><span>Option 2</span></li>
+            <li><div data-percentage="54" class="bar"></div><span>Option 3</span></li>
+            <li><div data-percentage="94" class="bar"></div><span>Option 4</span></li>
+            <li><div data-percentage="44" class="bar"></div><span>Option 5</span></li>
+            <li><div data-percentage="23" class="bar"></div><span>Option 6</span>
+            </li>
+        </ul>
+    </div>
+        <!---END  VERTICAL BAR GRAPH -->
+    <div class="trigger2" ><button type="button" class="btn btn-default">Try Again</button></div>
+
+        <!---HORIZONTAL BAR GRAPH -->
+        <ul class="skill-list">
+            <li class="skill">
+                <h3>Level1</h3>
+                <progress class="skill-1" max="100" value="50">
+                    <strong>Skill Level: 50%</strong>
+                </progress>
+            </li>
+            <li class="skill">
+                <h3>Level2</h3>
+                <progress class="skill-2" max="100" value="75">
+                    <strong>Skill Level: 75%</strong>
+                </progress>
+            </li>
+            <li class="skill">
+                <h3>Level3</h3>
+                <progress class="skill-3" max="100" value="25">
+                    <strong>Skill Level: 25%</strong>
+                </progress>
+            </li>
+        </ul>
+        <!---END HORIZONTAL BAR GRAPH -->
+        <div class="trigger6" ><button type="button" class="btn btn-default">Try Again</button></div>
+
+        <!---1 PIE CHART -->
+    <div id="pie-1">
+       <div class=spinner>
+           <div class= "spinner-inner anima-pie"></div>
+           <div class="spinner-mask "><p class="anima-text">45%</p> </div>
+           <div class=spinner-mask-two></div>
+       </div>
+        <div class="trigger3" ><button type="button" class="btn btn-default">Try Again</button></div>
+   </div>
+
+        <!---2 PIE CHART -->
+     <div id="pie-2">
+        <p class="anima-text">10%</p>
+        <div class="spinner">
+           <span><em class="animation1"></em></span>
+           <span><em class="animation2"></em></span>
+       </div>
+        <div class="trigger4" ><button type="button" class="btn btn-default">Try Again</button></div>
+    </div>
+
+
+        <!---3 PIE CHART -->
+       <div id="pie-3">
+           <p class="anima-text">65%</p>
+           <div class="spinner">
+               <span><em class="animation1"></em></span>
+               <span><em class="animation2"></em></span>
+           </div>
+           <div class="trigger5" ><button type="button" class="btn btn-default">Try Again</button></div>
+       </div>
+
+    <div class="footer">
+
+    </div>
+</div>
+
+</div>
+<!-- build:js scripts/plugins.js -->
+
+<!-- endbuild -->
+
+<!-- build:js({app,.tmp}) scripts/main.js -->
+
+<!-- endbuild -->
+</body>
+</html>
