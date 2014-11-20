@@ -1,4 +1,4 @@
-#<b>CSS3 Animation Library</b>.#
+#<b>CSS3 Animation Library</b>#
 
 ##<b>BRIEF/BACKGOUND PROJECT</b>##
 
