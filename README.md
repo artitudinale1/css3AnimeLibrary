@@ -1,6 +1,6 @@
 #<b>CSS3 Animation Library</b>#
 
-##<b>BRIEF/BACKGOUND PROJECT</b>##
+##<b>BRIEF/BACKGROUND PROJECT</b>##
 
 This is a prototype of CSS3 animation library I devoloped while I was working in a digital healthcare ageny based in London.
 In the Healthcare marketing many people doesn't know what it s achivable thought digital exepcially in terms of look & feel and 
